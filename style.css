@@ -57,8 +57,6 @@ html {
 }
 
 .branding {
-    position: relative;
-    left: 20px;
     width: max-content;
 }
 
@@ -180,7 +178,7 @@ header nav .links a:hover {
 .skills {
     background-color: white;
     height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     padding-top: 3rem;
 }
 
@@ -322,10 +320,6 @@ p.note {
     height: 100vh;
 }
 
-.content-lft, .content-ryt {
-    flex-basis: 400px;
-}
-
 .container-2 {
     margin-top: -40px;
     display: flex;
@@ -335,7 +329,15 @@ p.note {
 
 .content-lft img {
     height: 300px;
+}
 
+.content-lft {
+    margin: 0 2rem;
+}
+
+.content-ryt {
+    width: 500px;
+    height: 500px;
 }
 
 .content-ryt h2 {
@@ -533,12 +535,35 @@ p.note {
 
 .copyright p {
     color: white;
+    padding-top: 30px;
 }
 
 
 /* ------------------------------------responsive------------------------------------------------ */
 
-@media all and (min-height: 700px) {
+/* nest hub max */
+@media (min-height: 700px) {    
+
+    .brand-logo {
+        padding-left: 0px;
+    }
+    .skills {
+        height: 120vh;
+    }
+
+    .header-skills{
+        margin: 30px 0;
+    }
+    .container-5 {
+        align-items: center;
+        justify-items: center;
+        align-content: space-evenly
+    }
+    
+    .copyright {
+        text-align: center;
+    }
+
     .left-hero img {
         height: 660px;
         margin-top: 2.5rem;
@@ -549,7 +574,33 @@ p.note {
     }
 
     .copyright p {
-    transform: translateY(200%);
+    transform: translateY(315%);
+    }
+}
+
+/* Nest hub */
+@media (max-width: 1024px) {
+
+    .brand-logo {
+    padding-left: 50px;
+    }
+
+    .container-5 {
+        padding: 20px 0;
+    }
+
+    .projects p.note {
+        margin: 0;
+        padding-top: 10px;
+    }
+    
+    .contact-us .copyright p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-us .copyright {
+        margin: 0;
     }
 }
 
@@ -564,20 +615,54 @@ p.note {
     .container-1 {
     clip-path: polygon(0 0, 100% 0, 100% 97%, 80% 90%, 0 100%);
     } 
+    
     .right-hero {
     margin-top: -2rem;
     margin-left: -10rem;
     width: 650px;
     }
-}
 
-@media (max-width: 1100px) {
     .brand-logo {
-    transform: translateX(0px);
-}
+        padding-left: 100px;
+    }
 }
 
-@media (max-width: 850px) {
+/* ipad */
+@media (min-height: 1024px) {
+    .container-1 {
+        height: 60vh;
+    } 
+
+    .skills {
+        height: 70vh;
+    }    
+
+    .projects {
+        height: 70vh;
+        
+    }   
+
+    .container-5 {
+        height: 52vh;
+        grid-template-columns: repeat(2, 350px);
+    }
+
+    .about {
+        height: 70vh;
+    } 
+
+    .contact-us {
+        height: 70vh;
+    }
+
+    .mobile-nav {
+        height: 110vh;
+    }
+} 
+
+/* getting responsive navbar */
+@media (max-width: 850px){
+
     #main-nav {
         display: none;
     }
@@ -699,134 +784,221 @@ p.note {
         height: 500px;
         margin-top: 5rem;
         margin-right: 0;
-        transform: translate(-25%, 9%);
+        transform: translate(-25%, 8%);
     }
-
 }
 
-@media (max-width: 412px) {
+
+/* for mobile screens */
+
+@media only screen and (max-width: 650px) {
+    .logo-with-bars {
+        max-width: 100%;    
+    }
+
+    .container-1 {
+        overflow: hidden;
+        width: 100%;
+        max-height: auto;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 100%, 0% 100%);
+    }
 
     .hero {
         flex-direction: column;
     }
-    .container-1 {
-        height: 80vh;
-        width: 110vw;
-    }
 
-    .right-hero {
-        margin-top: -2rem;
-        margin-left: -;
-        width: 650px;
+    .left-hero {
+        flex-basis: 100%;
+        margin: 0;
+        text-align: center;
     }
 
     .left-hero img {
+        height: 550px;
+        transform: scale(100%);
+        transform: translate( -30px, 100px);
+        margin-top: 0;
+    }
+
+    .right-hero {
+        z-index: 2;
+        margin-top: -200px;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        padding: 0 3rem;
+        width: 100%;
+        height: 350px;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.219), black);
+        border-radius: 10px;
 
     }
 
+    .right-hero h1 {
+        font-family: 'Roboto';
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
 
+    .right-hero h1 span {
+        font-size: 3.5rem;
+    } 
 
+    .right-hero p {
+        line-height: 1.5;
+        font-size: .8rem;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .right-hero button {
+        margin: .5rem 0;
+    }
 
     .skills {
-        display: hide;
-        height: 70vh;
-    }    
+        height: auto;
+        min-width: 100%;
+    }
 
-    .projects {
-        display: hide;
-        height: 70vh;
-        
+    .skills p {
+        font-size: 0.9rem;
     }   
 
+    .card img {
+        height: 60px;
+    }
+
+    .card h2{
+        font-size: 1rem;
+    }
+
+    .projects {
+        height: 120vh;
+        width: 100%;
+    }
+    .projects h1 {
+        font-size: 3rem;
+    }
+
+    .projects h1 span {
+        font-size: 3.5rem;
+    }
+
+    .projects p {
+        font-size: 0.9rem;
+    }
+
+    .projects p.note {
+        transform: translateY(70px);
+        padding: 0;
+        font-size: 0.8rem;
+        margin-bottom: -3rem;
+    }
     .container-5 {
-        display: hide;
-        height: 52vh;
-        grid-template-columns: repeat(2, 350px);
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        padding-top: 0;
+        margin-top: 5rem;
+    }
+
+    .container-5 img {
+        height: 120px;
+        width: 220px;
+        margin: 0;
     }
 
     .about {
-        display: hide;
-        height: 70vh;
-    } 
+        width: 100%;
+        padding: 0;
+        height: 100%;
+    }
+
+    .container-2 {
+        flex-direction: column;
+        height: 700px;
+
+    }
+
+    .about .media-links {
+        justify-content: center;
+    }
+
+    .container-2 img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .about .content-ryt {
+        padding: 0 20px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .content-lft {
+        margin-top: 4rem;
+    }
+
+    .about .content-ryt p {
+        font-size: 0.8rem;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .contact-container h1 {
+        padding-top: 20px;
+        font-size: 2rem;
+    }
+
+    .contact-container h1 span {
+        margin-top: 10px;
+        font-size: 2rem;
+    }
+
+    .contact-container p{
+        margin-top: 10px;
+        font-size: .8rem;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .email-container, .footer-media-links {
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        margin: 10px 40px;
+    }
+
+    .email-container i {
+        margin-top: 50px;
+    }
+
+    .footer .email-container i {
+        font-size: 60px;
+    }
+
+    .footer .email-container a {
+        font-size: 10px;
+    }
+
+    .footer-media-links div.media-links i {
+        font-size: 3rem;
+        margin: 80px 10px;
+    }
 
     .contact-us {
-        display: hide;
-        height: 70vh;
+        height: 100%;
     }
-}
-@media (max-width: 1280px) {    
-    .container-5 {
-        height: 78vh;
-        align-items: center;
-        justify-items: center;
-        align-content: space-evenly
-    }
-    
+
     .copyright {
         position: relative;
-        text-align: center;
+        font-size: .8rem;
+        margin-top: 100px;
     }
-    .copyright p {
-        position: absolute;
-        /* transform: translate(150%, 25vh); */
-        transform: translateY(-60%);
-        right: 40%;
-    }
+}   
 
-
-}
-
-/* @media (min-width: 768px) {
-    .container-1 {
-        height: 60vh;
-    } 
-
-    .skills {
-        height: 70vh;
-    }    
-
-    .projects {
-        height: 70vh;
-        
-    }   
-
-    .container-5 {
-        height: 52vh;
-        grid-template-columns: repeat(2, 350px);
-    }
-
-    .about {
-        height: 70vh;
-    } 
-
-    .contact-us {
-        height: 70vh;
-    }
-
-    .copyright p {
-    transform: translateY(200%);
-    }
-
-    .mobile-nav {
-        height: 110vh;
-    }
-
-} */
