@@ -707,12 +707,12 @@ p.note {
     }
     
     .nav-logo {
-    position: absolute;
-    height: 100px;
-    cursor: pointer;
-    padding: 20px 0;
-    left: 0;
-    z-index: 4;
+        position: absolute;
+        height: 100px;
+        cursor: pointer;
+        padding: 20px 0;
+        left: 0;
+        z-index: 4;
     }
 
     .mobile-nav {
@@ -799,7 +799,7 @@ p.note {
     .container-1 {
         overflow: hidden;
         width: 100%;
-        max-height: auto;
+        height: 100%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 100%, 0% 100%);
     }
 
@@ -814,9 +814,9 @@ p.note {
     }
 
     .left-hero img {
-        height: 550px;
+        height: 700px;
         transform: scale(100%);
-        transform: translate( -30px, 100px);
+        transform: translate( -45px, 130px);
         margin-top: 0;
     }
 
@@ -855,8 +855,8 @@ p.note {
     }
 
     .skills {
-        height: auto;
-        min-width: 100%;
+        max-height: 100vh;
+        width: 100%;
     }
 
     .skills p {
@@ -872,7 +872,7 @@ p.note {
     }
 
     .projects {
-        height: 120vh;
+        height: 120%;
         width: 100%;
     }
     .projects h1 {
@@ -888,7 +888,7 @@ p.note {
     }
 
     .projects p.note {
-        transform: translateY(70px);
+        transform: translateY(0);
         padding: 0;
         font-size: 0.8rem;
         margin-bottom: -3rem;
@@ -900,7 +900,7 @@ p.note {
         flex-direction: column;
         /* flex-wrap: wrap; */
         padding-top: 0;
-        margin-top: 5rem;
+        margin-top: 0;
     }
 
     .container-5 img {
@@ -992,7 +992,8 @@ p.note {
     }
 
     .contact-us {
-        height: 100%;
+        min-height: 100%;
+        width: 100%;
     }
 
     .copyright {
